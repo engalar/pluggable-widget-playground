@@ -14,7 +14,9 @@ export interface GraphContainerProps {
 }
 
 export interface GraphPreviewProps {
-    class: string;
+    className: string;
     style: string;
+    styleObject?: CSSProperties;
+    readOnly: boolean;
     sampleText: string;
 }
