@@ -4,6 +4,7 @@
  * @author Mendix UI Content Team
  */
 import { CSSProperties } from "react";
+import { EditableValue } from "mendix";
 
 export interface GraphContainerProps {
     name: string;
@@ -11,6 +12,7 @@ export interface GraphContainerProps {
     style?: CSSProperties;
     tabIndex?: number;
     sampleText: string;
+    myAttribute1?: EditableValue<string>;
 }
 
 export interface GraphPreviewProps {
@@ -19,4 +21,5 @@ export interface GraphPreviewProps {
     styleObject?: CSSProperties;
     readOnly: boolean;
     sampleText: string;
+    myAttribute1: string;
 }

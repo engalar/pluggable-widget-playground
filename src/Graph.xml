@@ -10,5 +10,14 @@
                 <description>Sample text input</description>
             </property>
         </propertyGroup>
+        <propertyGroup caption="第一课">
+            <property key="myAttribute1" type="attribute" required="false">
+              <caption>当前组件实体上下文的字符属性</caption>
+              <description></description>
+              <attributeTypes>
+                <attributeType name="String" />
+              </attributeTypes>
+            </property>
+        </propertyGroup>
     </properties>
 </widget>
