@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget id="mendixcn.graph.Graph" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web" xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+<widget id="mendixcn.graph.Graph" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>Graph</name>
     <description>My widget description</description>
     <icon/>
@@ -12,11 +14,33 @@
         </propertyGroup>
         <propertyGroup caption="第一课">
             <property key="myAttribute1" type="attribute" required="false">
-              <caption>当前组件实体上下文的字符属性</caption>
-              <description></description>
-              <attributeTypes>
-                <attributeType name="String" />
-              </attributeTypes>
+                <caption>当前组件实体上下文的字符属性</caption>
+                <description></description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="第二课">
+            <property key="myDataSource" type="datasource" required="false" isList="true">
+                <caption>Data Source</caption>
+                <description></description>
+            </property>
+            <property key="myAttribute2" type="attribute" required="false" dataSource="myDataSource">
+                <caption>Attribute</caption>
+                <description></description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                    <attributeType name="Binary" />
+                    <attributeType name="Boolean" />
+                    <attributeType name="DateTime" />
+                    <attributeType name="Decimal" />
+                    <attributeType name="Enum" />
+                    <attributeType name="HashString" />
+                    <attributeType name="Integer" />
+                    <attributeType name="Long" />
+                    <attributeType name="AutoNumber" />
+                </attributeTypes>
             </property>
         </propertyGroup>
     </properties>
