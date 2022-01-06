@@ -4,7 +4,7 @@
  * @author Mendix UI Content Team
  */
 import { CSSProperties } from "react";
-import { EditableValue, ListValue, ListAttributeValue } from "mendix";
+import { EditableValue, ListValue, ListActionValue, ListAttributeValue } from "mendix";
 import { Big } from "big.js";
 
 export interface GraphContainerProps {
@@ -16,6 +16,7 @@ export interface GraphContainerProps {
     myAttribute1?: EditableValue<string>;
     myDataSource?: ListValue;
     myAttribute2?: ListAttributeValue<string | any | boolean | Date | Big>;
+    mySelectAction?: ListActionValue;
 }
 
 export interface GraphPreviewProps {
@@ -27,4 +28,5 @@ export interface GraphPreviewProps {
     myAttribute1: string;
     myDataSource: {} | { type: string } | null;
     myAttribute2: string;
+    mySelectAction: {} | null;
 }

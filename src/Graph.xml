@@ -43,5 +43,11 @@
                 </attributeTypes>
             </property>
         </propertyGroup>
+        <propertyGroup caption="第三课">
+            <property key="mySelectAction" type="action" dataSource="myDataSource">
+                <caption>选择动作</caption>
+                <description></description>
+            </property>
+        </propertyGroup>
     </properties>
 </widget>
