@@ -9,9 +9,23 @@ export default function (props: GraphContainerProps) {
         }
     }, [props.myAttribute1]);
 
+    const data = useMemo(() => {
+        if (props.myDataSource?.status === ValueStatus.Available) {
+            return props.myDataSource.items;
+        }
+    }, [props.myDataSource]);
+
     return <div>
         <h1>自定义组件（第一课）</h1>
         <h2><span className="alert-info panel">Default value</span>     {props.sampleText}</h2>
         <h2><span className="alert-info panel">当前组件实体上下文的字符属性</span>     {myAttribute1 ? myAttribute1 : '--'}</h2>
+        <h2>
+            <span className="alert-info panel">列表</span>
+            <ul>
+                {
+                    data?.map(item => <li><button>{props.myAttribute2?.get(item).value}</button></li>)
+                }
+            </ul>
+        </h2>
     </div>;
 }
